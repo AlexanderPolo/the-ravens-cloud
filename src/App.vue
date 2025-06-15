@@ -2,7 +2,6 @@
 import { reactive, ref } from 'vue';
 import axios from 'axios';
 
-// Реактивний об'єкт для зберігання даних з форм
 const params = reactive({
   droneWeight: 1.5,
   payloadWeight: 0.5,
@@ -14,13 +13,11 @@ const params = reactive({
   windAngle_deg: 270,
 });
 
-// Реактивні змінні для стану інтерфейсу
 const result = ref(null);
 const isLoading = ref(false);
 const errorMessage = ref('');
 const showInfoModal = ref(false); // Для модального вікна "Інфо"
 
-// Функція, яка викликається при натисканні на кнопку
 async function performCalculation() {
   isLoading.value = true;
   errorMessage.value = '';
